@@ -182,8 +182,6 @@ module.exports = function GatheringMarkers(mod) {
 			});
 		});
 
-		console.log(settingsStructure);
-
 		return settingsStructure;
 	}
 
