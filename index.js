@@ -172,15 +172,17 @@ module.exports = function GatheringMarkers(mod) {
 			"type": "bool"
 		}];
 
-		Object.values(gatheringItems).forEach(itemId => {
-			if (!gatheringItemNames.has(parseInt(itemId))) return;
+		Object.keys(gatheringItems).forEach(key => {
+			if (gatheringItems[key] === undefined || !gatheringItemNames.has(gatheringItems[key][0])) return;
 
 			settingsStructure.push({
-				"key": Object.keys(gatheringItems).find(k => gatheringItems[k].includes(itemId)),
-				"name": gatheringItemNames.get(parseInt(itemId)),
+				"key": key,
+				"name": gatheringItemNames.get(gatheringItems[key][0]),
 				"type": "bool"
 			});
 		});
+
+		console.log(settingsStructure);
 
 		return settingsStructure;
 	}
