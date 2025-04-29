@@ -1,0 +1,14 @@
+{
+    "name": "gathering-markers",
+    "options": {
+        "niceName": "Gathering Markers",
+        "settingsFile": "config.json",
+        "settingsMigrator": "settings_migrator.js",
+        "settingsVersion": 1
+    },
+    "author": "HSDN",
+    "description": "Gathering Markers",
+    "servers": ["https://raw.githubusercontent.com/tera-classic-mods/gathering-markers/master/"],
+    "supportUrl": "https://github.com/tera-classic-mods/gathering-markers/issues",
+    "disableAutoUpdate": false
+}
